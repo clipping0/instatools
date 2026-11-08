@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#09090d"><meta name="description" content="InstaTools — editable social insights preview studio">
+  <link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css"><title>InstaTools</title>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brandmark">I</span> InstaTools</a><span class="tag">INSIGHTS STUDIO</span><button id="addProfile" class="primary">＋ Add profile</button></header>
+<main>
+<section id="directory" class="directory">
+  <div class="hero"><p class="eyebrow">CREATOR TOOLKIT</p><h1>Your social preview<br><span>workspace.</span></h1><p class="muted">Open a local demo, preview a profile and edit sample insights. No social account login required.</p></div>
+  <div class="section-head"><div><p class="eyebrow">YOUR WORKSPACE</p><h2>Apps</h2></div><span class="muted">1 available</span></div>
+  <article class="app-card"><div class="app-icon">◎</div><div class="app-info"><h3>Instagram Preview</h3><p class="muted">Profile • Reels • Editable insights</p><span class="demo-label">LOCAL DEMO</span></div><button id="openApp" class="primary">Open</button></article>
+</section>
+<section id="studio" class="studio hidden">
+  <div class="studio-head"><button id="back" class="ghost">← Apps</button><div class="profile-switch"><select id="profileSelect" aria-label="Choose profile"></select><button id="editProfile" class="ghost">Edit</button></div></div>
+  <section class="profile">
+    <div class="avatar" id="avatar">C</div><div class="profile-details"><h2 id="username">@creator</h2><p id="bio" class="muted">Creator account · Demo profile</p><div class="stats"><span><b id="postCount">128</b> posts</span><span><b>24.8K</b> followers</span><span><b>512</b> following</span></div></div>
+  </section>
+  <div class="profile-actions"><button class="secondary">Edit profile</button><button class="secondary">Share profile</button><button class="secondary">＋</button></div>
+  <nav class="tabs"><button class="tab active" data-tab="posts">Posts</button><button class="tab" data-tab="reels">Reels</button><button class="tab" data-tab="tagged">Tagged</button></nav>
+  <div id="postGrid" class="post-grid"></div>
+  <section class="insights">
+    <div class="section-head"><div><p class="eyebrow">CREATOR ANALYTICS</p><h2>Reel insights</h2></div><button id="setInsights" class="primary">Set Insights</button></div>
+    <div class="reel-preview"><div class="reel-thumb"><span>▶</span></div><div><b>Sample reel · Demo content</b><p class="muted">All figures below are editable sample data, not verified Instagram analytics.</p></div></div>
+    <nav class="tabs insight-tabs"><button class="tab active" data-insight="overview">Overview</button><button class="tab" data-insight="engagement">Engagement</button><button class="tab" data-insight="audience">Audience</button></nav>
+    <div id="insightPanel"></div>
+  </section>
+</section>
+</main>
+<div id="modal" class="modal hidden"><div class="modal-card"><button id="closeModal" class="close">×</button><h2 id="modalTitle">Edit profile</h2><div id="modalBody"></div><div class="modal-actions"><button id="cancelModal" class="secondary">Cancel</button><button id="saveModal" class="primary">Save</button></div></div></div>
+<footer>InstaTools · Independent demo project · <a href="mailto:clipping0090@gmail.com">Support</a></footer>
+<script src="app.js"></script>
+</body></html>
